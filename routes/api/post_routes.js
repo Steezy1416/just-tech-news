@@ -67,12 +67,12 @@ router.post("/", (req, res) => {
 //put/api/post/upvote
 router.put("/upvote", (req, res) => {
     //custon static method created in models/Post.js
-    Vote.upvote(req.body, {Vote})
-    .then(updatedPostData => res.json(updatedPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(400).json(err);
-    });
+    Vote.upvote(req.body, { Vote })
+        .then(updatedPostData => res.json(updatedPostData))
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
+        });
 })
 
 //updata a post title
